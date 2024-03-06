@@ -1,0 +1,25 @@
+﻿<Page x:Class="Kvanto.Pages.Kurs.Kurs_Info"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Kvanto.Pages.Kurs"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Kurs_Info">
+
+    <Grid Background="White">
+        <Grid Height="60" VerticalAlignment="Top">
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="1,1" StartPoint="0,0">
+                    <GradientStop Color="#FF2550D7"/>
+                    <GradientStop Color="#FF0083C5" Offset="1"/>
+                </LinearGradientBrush>
+            </Grid.Background>
+            <Label Content="Информация о предмете" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" Foreground="White" FontSize="18" FontWeight="Black"/>
+        </Grid>
+        <Label x:Name="Name" Content="Name" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,80,0,0" FontSize="14" Foreground="#FF514E4E" FontWeight="Black"/>
+        <Label x:Name="Description" Content="Description" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,130,0,0" FontSize="14" Foreground="#FF514E4E" FontWeight="Light"/>
+        <Button x:Name="Entrance" Width="180" Height="30" Margin="0,0,20,10" Background="#FF514E4E" BorderBrush="White" HorizontalAlignment="Right" VerticalAlignment="Bottom" MouseDown="ChageUsers_Click"/>
+    </Grid>
+</Page>

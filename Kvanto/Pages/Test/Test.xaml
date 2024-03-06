@@ -1,0 +1,82 @@
+﻿<Page x:Class="Kvanto.Pages.Test.Test"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      xmlns:local="clr-namespace:Kvanto.Pages.Test"
+      xmlns:uc="clr-namespace:Kvanto.Pages.Test"
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="900"
+      Title="Test">
+
+
+
+    <Grid Background="White">
+        <Border x:Name="Border_TextNumber" CornerRadius="20" Width="100" Height="40" Margin="10 40 0 0" VerticalAlignment="Top" HorizontalAlignment="Left" BorderBrush="#FFE7E7E7" BorderThickness="1">
+            <TextBlock x:Name="TextNumberVopr" Text="1 / 20" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="14" FontWeight="UltraLight" Foreground="#FFAFAFAF"/>
+        </Border>
+        <TabControl x:Name="myTabControl" SelectedIndex="0" Margin="10,80,10,10">
+            <!--<RadioButton Content="RadioButton" Margin="20,160,20,0" VerticalAlignment="Top" IsChecked="False" Style="{StaticResource BlueRadioButtonStyle}"/>-->
+            <!--<Button Content="Click me" Style="{StaticResource BlueButtonStyle}" Width="150" Height="50"/>-->
+            <!--<TabItem Header="Вопрос 1">
+                <Grid Background="#FFE5E5E5">
+                    <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Вопрос 1" FontSize="23" VerticalAlignment="Top" Margin="10,10,0,0"/>
+                    <StackPanel Margin="10,74,0,0">
+                        <RadioButton Content="Какой-то ответ" FontSize="16" GroupName="Group1"/>
+                        <RadioButton Content="Какой-то ответ" FontSize="16" GroupName="Group1"/>
+                    </StackPanel>
+                    <Button Width="100" Height="30" Margin="664,307,0,0" Background="#074575" Foreground="White" Content="Далее" FontSize="16" BorderBrush="#FF514E4E" HorizontalAlignment="Left" VerticalAlignment="Top" Click="NextTabButton_Click"/>
+                    <Button Width="100" Height="30" Margin="559,307,0,0" Background="#074575" Foreground="White" Content="Назад" FontSize="16" BorderBrush="#FF514E4E" HorizontalAlignment="Left" VerticalAlignment="Top" Click="PreviousTabButton_Click"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Вопрос 2">
+                <Grid Background="#FFE5E5E5">
+                    <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Вопрос 2" FontSize="23" VerticalAlignment="Top" Margin="10,10,0,0"/>
+                    <StackPanel Margin="10,74,0,0">
+                        <RadioButton Content="Какой-то ответ" FontSize="16" GroupName="Group2"/>
+                        <RadioButton Content="Какой-то ответ" FontSize="16" GroupName="Group2"/>
+                    </StackPanel>
+                    <Button Width="100" Height="30" Margin="664,307,0,0" Background="#074575" Foreground="White" Content="Далее" FontSize="16" BorderBrush="#FF514E4E" HorizontalAlignment="Left" VerticalAlignment="Top" Click="NextTabButton_Click"/>
+                    <Button Width="100" Height="30" Margin="559,307,0,0" Background="#074575" Foreground="White" Content="Назад" FontSize="16" BorderBrush="#FF514E4E" HorizontalAlignment="Left" VerticalAlignment="Top" Click="PreviousTabButton_Click"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Вопрос 3">
+                <Grid Background="#FFE5E5E5">
+                    <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Вопрос 3" FontSize="23" VerticalAlignment="Top" Margin="10,10,0,0"/>
+                    <StackPanel Margin="10,74,0,0">
+                        <RadioButton Content="Какой-то ответ" FontSize="16" GroupName="Group3"/>
+                        <RadioButton Content="Какой-то ответ" FontSize="16" GroupName="Group3"/>
+                    </StackPanel>
+                    <Button Width="100" Height="30" Margin="664,307,0,0" Background="#074575" Foreground="White" Content="Далее" FontSize="16" BorderBrush="#FF514E4E" HorizontalAlignment="Left" VerticalAlignment="Top" Click="NextTabButton_Click"/>
+                    <Button Width="100" Height="30" Margin="559,307,0,0" Background="#074575" Foreground="White" Content="Назад" FontSize="16" BorderBrush="#FF514E4E" HorizontalAlignment="Left" VerticalAlignment="Top" Click="PreviousTabButton_Click"/>
+                </Grid>
+            </TabItem>-->
+        </TabControl>
+        <ProgressBar x:Name="progressBar" Margin="10,10,10,0" VerticalAlignment="Top" Width="auto" Background="White" BorderBrush="{x:Null}" Foreground="#FF074575" Maximum="20">
+            <ProgressBar.Style>
+                <Style TargetType="{x:Type ProgressBar}">
+                    <Setter Property="Height" Value="5"/>
+                    <Setter Property="Value" Value="6"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type ProgressBar}">
+                                <Border x:Name="PART_Track" CornerRadius="3" Background="#FFE7E7E7" >
+                                    <Rectangle x:Name="PART_Indicator" HorizontalAlignment="Left"  RadiusX="3" RadiusY="3" Margin="0" Width="auto">
+                                        <Rectangle.Fill>
+                                            <LinearGradientBrush EndPoint="1,1" StartPoint="0,0">
+                                                <GradientStop Color="#FF2550D7"/>
+                                                <GradientStop Color="#FF0083C5" Offset="1"/>
+                                            </LinearGradientBrush>
+                                        </Rectangle.Fill>
+                                    </Rectangle>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </ProgressBar.Style>
+        </ProgressBar>
+
+    </Grid>
+</Page>

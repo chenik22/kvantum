@@ -1,0 +1,93 @@
+﻿<Page x:Class="Kvanto.Pages.Users.UsersAdd"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" 
+      xmlns:local="clr-namespace:Kvanto.Pages.Users"
+      mc:Ignorable="d" 
+      d:DesignHeight="480" d:DesignWidth="800"
+      Title="UsersAdd">
+
+    <Grid Background="White">
+        <Grid Height="60" VerticalAlignment="Top">
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="1,1" StartPoint="0,0">
+                    <GradientStop Color="#FF2550D7"/>
+                    <GradientStop Color="#FF0083C5" Offset="1"/>
+                </LinearGradientBrush>
+            </Grid.Background>
+            <Label x:Name="zagl" Content="Создание пользователя" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" Foreground="White" FontSize="18" FontWeight="Black"/>
+            
+        </Grid>
+        <Grid Margin="0,0,0,0">
+            <StackPanel Width="350" Margin="0 80 0 10">
+                <TextBox x:Name="login" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Text="" materialDesign:HintAssist.Hint="Логин" materialDesign:HintAssist.FloatingOffset="0,-20" BorderThickness="0 0 0 0.5" Foreground="#FF272727" FontSize="16" Margin="0,5,0,0" VerticalAlignment="Center" HorizontalAlignment="Stretch" CaretBrush="Black" SelectionBrush="Black" BorderBrush="#FF0083C5"/>
+                <TextBox x:Name="fio" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Text="" materialDesign:HintAssist.Hint="ФИО" materialDesign:HintAssist.FloatingOffset="0,-20" BorderThickness="0 0 0 0.5" Foreground="#FF272727" FontSize="16" Margin="0,5,0,0" VerticalAlignment="Center" HorizontalAlignment="Stretch" CaretBrush="Black" SelectionBrush="Black" BorderBrush="#FF0083C5"/>
+                <TextBox x:Name="password" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Text="" materialDesign:HintAssist.Hint="Пароль" materialDesign:HintAssist.FloatingOffset="0,-20" BorderThickness="0 0 0 0.5" Foreground="#FF272727" FontSize="16" Margin="0,5,0,0" VerticalAlignment="Center" HorizontalAlignment="Stretch" CaretBrush="Black" SelectionBrush="Black" BorderBrush="#FF0083C5"/>
+                <TextBox x:Name="recoveryPassword" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Text="" materialDesign:HintAssist.Hint="Подтвердите пароль" materialDesign:HintAssist.FloatingOffset="0,-20" BorderThickness="0 0 0 0.5" Foreground="#FF272727" FontSize="16" Margin="0,5,0,0" VerticalAlignment="Center" HorizontalAlignment="Stretch" CaretBrush="Black" SelectionBrush="Black" BorderBrush="#FF0083C5"/>
+                <ComboBox x:Name="role" Style="{StaticResource MaterialDesignFloatingHintComboBox}" Text="" materialDesign:HintAssist.Hint="Роль пользователя" materialDesign:HintAssist.FloatingOffset="0,-20" BorderThickness="0 0 0 0.5" Foreground="#FF272727" FontSize="16" Margin="0,5,0,0" VerticalAlignment="Center" HorizontalAlignment="Stretch" BorderBrush="#FF0083C5">
+                    <ComboBoxItem Content="Admin" Tag="Admin"/>
+                    <ComboBoxItem Content="teacher" Tag="teacher"/>
+                    <ComboBoxItem Content="users" Tag="users"/>
+                    <ComboBoxItem Content="" Tag="null"/>
+                </ComboBox>
+                <ComboBox x:Name="kvan" Style="{StaticResource MaterialDesignFloatingHintComboBox}" Text="" materialDesign:HintAssist.Hint="Предмет(не обязательно)" materialDesign:HintAssist.FloatingOffset="0,-20" BorderThickness="0 0 0 0.5" Foreground="#FF272727" FontSize="16" Margin="0,5,0,0" VerticalAlignment="Center" HorizontalAlignment="Stretch" BorderBrush="#FF0083C5">
+                    <ComboBoxItem Content="Медиаквантум" Tag="med"/>
+                    <ComboBoxItem Content="Аэроквантум" Tag="avi"/>
+                    <ComboBoxItem Content="Биоквантум" Tag="bio"/>
+                    <ComboBoxItem Content="Космоквантум" Tag="cos"/>
+                    <ComboBoxItem Content="IT-квантум" Tag="prog"/>
+                    <ComboBoxItem Content="Наноквантум" Tag="him"/>
+                    <ComboBoxItem Content="Хайтек" Tag="dis"/>
+                    <ComboBoxItem Content="VR / Ar" Tag="vr"/>
+                    <ComboBoxItem Content="Промышленный дизайн" Tag="teh"/>
+                    <ComboBoxItem Content="Промробоквантум" Tag="rob"/>
+                    <ComboBoxItem Content="" Tag="null"/>
+                </ComboBox>
+                <ComboBox x:Name="Teacher" Style="{StaticResource MaterialDesignFloatingHintComboBox}" Text="" materialDesign:HintAssist.Hint="Учитель(не обязательно)" materialDesign:HintAssist.FloatingOffset="0,-20" BorderThickness="0 0 0 0.5" Foreground="#FF272727" FontSize="16" Margin="0,5,0,0" VerticalAlignment="Center" HorizontalAlignment="Stretch" BorderBrush="#FF0083C5">
+                    <ComboBoxItem Content="wdasd" Tag="asd"/>
+                    <ComboBoxItem Tag="asd"/>
+                    <ComboBoxItem Tag="asd"/>
+                </ComboBox>
+            </StackPanel>
+            <!--Накидать блоки создания вопросов-->
+            <!--<Label Content="Логин" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,340" FontSize="15" Foreground="Black" FontWeight="Black"/>
+            <TextBox Text="" Background="#074575" Foreground="White" FontSize="16" Height="30" Width="400" Margin="0,0,0,290"/>
+            <Label Content="ФИО" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,240" FontSize="15" Foreground="Black" FontWeight="Black"/>
+            <TextBox Text="" Background="#074575" Foreground="White" FontSize="16" Height="30" Width="400" Margin="0,0,0,190"/>
+            <Label Content="Пароль" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,140" FontSize="15" Foreground="Black" FontWeight="Black"/>
+            <TextBox Text="" Background="#074575" Foreground="White" FontSize="16" Height="30" Width="400" Margin="0,0,0,80"/>
+            <Label Content="Подтвердите пароль" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,5,0,40" FontSize="15" Foreground="Black" FontWeight="Black"/>
+            <TextBox Text="" Background="#074575" Foreground="White" FontSize="16" Height="30" Width="400" Margin="0,20,0,0"/>
+            <Label x:Name="labelRole" Content="Роль пользователя" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,70,0,0" FontSize="15" Foreground="Black" FontWeight="Black"/>
+            <ComboBox Text="" Background="#074575" Foreground="Black" FontSize="16" Height="30" Width="400" Margin="0,120,0,0">
+                <ComboBoxItem Content="Admin" Tag="Admin"/>
+                <ComboBoxItem Content="teacher" Tag="teacher"/>
+                <ComboBoxItem Content="users" Tag="users"/>
+            </ComboBox>
+            <Label x:Name="labelKvan" Content="Предмет(не обязательно)" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,170,0,0" FontSize="15" Foreground="Black" FontWeight="Black"/>
+            <ComboBox Text="" Background="#074575" Foreground="Black" FontSize="16" Height="30" Width="400" Margin="0,220,0,0">
+                --><!--Расписать предметы--><!--
+                <ComboBoxItem Content="Медиаквантум" Tag="med"/>
+                <ComboBoxItem Content="Аэроквантум" Tag="avi"/>
+                <ComboBoxItem Content="Биоквантум" Tag="bio"/>
+                <ComboBoxItem Content="Космоквантум" Tag="cos"/>
+                <ComboBoxItem Content="IT-квантум" Tag="prog"/>
+                <ComboBoxItem Content="Наноквантум" Tag="him"/>
+                <ComboBoxItem Content="Хайтек" Tag="dis"/>
+                <ComboBoxItem Content="VR / Ar" Tag="vr"/>
+                <ComboBoxItem Content="Промышленный дизайн" Tag="teh"/>
+                <ComboBoxItem Content="Промробоквантум" Tag="rob"/>
+            </ComboBox>
+            <Label x:Name="labelTeacher" Content="Учитель(не обязательно)" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,270,0,0" FontSize="15" Foreground="Black" FontWeight="Black"/>
+            <ComboBox Text="" Background="#074575" Foreground="Black" FontSize="16" Height="30" Width="400" Margin="0,320,0,0">
+                --><!--Расписать предметы--><!--
+                <ComboBoxItem Tag=""/>
+                <ComboBoxItem Tag=""/>
+                <ComboBoxItem Tag=""/>
+            </ComboBox>-->
+            <Button x:Name="Entrance" Width="160" Height="30" Margin="0,400,0,0" Style="{StaticResource BlueButtonStyle}" Content="Зарегестрироваться" Foreground="White" Click="UserAdd_Click"/>
+        </Grid>
+    </Grid>
+</Page>

@@ -1,0 +1,60 @@
+﻿<Page x:Class="Kvanto.Pages.Main.Autorization"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" 
+      xmlns:local="clr-namespace:Kvanto.Pages.Main"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Autorization">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.7*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Border CornerRadius="0 0 0 0" Grid.Column="0">
+            <Border.Background>
+                <LinearGradientBrush EndPoint="0,0" StartPoint="1 ,1">
+                    <GradientStop Color="#CC48ADDF" Offset="1"/>
+                    <GradientStop Color="#A669BCE4" Offset="0"/>
+                </LinearGradientBrush>
+            </Border.Background>
+        </Border>
+        <Border x:Name="BorderStart" CornerRadius="0 0 0 0" Grid.Column="0" Opacity="1">
+            <Border.Background>
+                <ImageBrush ImageSource="/img/d7c3rf9gybe.jpg" Stretch="UniformToFill"/>
+            </Border.Background>
+            <Grid>
+                <Grid.Background>
+                    <LinearGradientBrush EndPoint="0,0" StartPoint="1 ,1">
+                        <GradientStop Offset="0.5"/>
+                        <GradientStop Color="#CC48ADDF" Offset="1"/>
+                        <GradientStop Color="#A669BCE4" Offset="0.257"/>
+                    </LinearGradientBrush>
+                </Grid.Background>
+                <StackPanel x:Name="StackPan">
+                    <TextBlock x:Name="textIsled" Text="Исследуйте!" Margin="-200 20 10 0" FontSize="30" FontWeight="Bold" Foreground="#FF074575"/>
+                    <TextBlock x:Name="textYchis" Text="Учитесь!" Margin="-200 0 10 0" FontSize="30" FontWeight="Bold" Foreground="#FF074575"/>
+                    <TextBlock x:Name="textStavOp" Text="Ставьте опыты!" Margin="-250 0 10 0" FontSize="30" FontWeight="Bold" Foreground="#FF074575"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+        <Border Background="White" CornerRadius="0 0 0 0" Grid.Column="1">
+            <Grid Margin="90 0" HorizontalAlignment="Stretch" VerticalAlignment="Center">
+                <StackPanel>
+                    <Label x:Name="LablePrev" Content="Авторизация" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,0,0,0" FontSize="22" Foreground="#FF0083C5" FontWeight="Black"/>
+                    <TextBox x:Name="LoginName" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Text="" materialDesign:HintAssist.Hint="Логин" materialDesign:HintAssist.FloatingOffset="0,-20" BorderThickness="0 0 0 0.5" Foreground="#FF272727" FontSize="16" Margin="0,30,0,0" VerticalAlignment="Center" HorizontalAlignment="Stretch" CaretBrush="Black" SelectionBrush="Black" BorderBrush="#FF0083C5" PreviewTextInput="LoginName_PreviewTextInput"/>
+                    <PasswordBox x:Name="Passwordd" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" materialDesign:HintAssist.Hint="Пароль" materialDesign:HintAssist.FloatingOffset="0,-20" BorderThickness="0 0 0 0.5" Background="{x:Null}" Foreground="#FF272727" FontSize="16" Margin="0,20,0,0" HorizontalAlignment="Stretch" VerticalAlignment="Center" CaretBrush="Black" SelectionBrush="Black" BorderBrush="#FF0083C5" PreviewTextInput="Passwordd_PreviewTextInput"/>
+                    <StackPanel Orientation="Horizontal">
+                        <Button x:Name="Entrance" Width="120" Height="35" Margin="0,20,0,0" Click="Entrance_Click" Content="Вход" HorizontalAlignment="Left" Style="{StaticResource NextButtonStyle}"/>
+                        <Button x:Name="Register" Height="30" Margin="20.5,20,0,0" Click="Register_Click" Content="Зарегистрироваться" HorizontalAlignment="Right" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF0083C5"/>
+                    </StackPanel>
+                    <TextBlock x:Name="ErrText" Text="Введён неверный логин или пароль" TextAlignment="Center" HorizontalAlignment="Center" Margin="0 10 0 0" Foreground="#00FF0000" Visibility="Visible"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+        <Frame x:Name="frame1" NavigationUIVisibility="Hidden" Visibility="Collapsed" Grid.Column="1"/>
+    </Grid>
+</Page>

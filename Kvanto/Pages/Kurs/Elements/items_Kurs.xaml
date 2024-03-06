@@ -1,0 +1,23 @@
+﻿<UserControl x:Class="Kvanto.Pages.Kurs.Elements.items_Kurs"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Kvanto.Pages.Kurs.Elements"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid Margin="10,10,10,10" MouseLeftButtonDown="Change_Click" MouseRightButtonDown="Delete_click">
+        <Border CornerRadius="8" Width="600" Height="auto" Background="White" BorderThickness="5" Margin="10,10,10,10">
+            <Border.BorderBrush>
+                <LinearGradientBrush EndPoint="1,1" StartPoint="0,0">
+                    <GradientStop Color="#FF2550D7"/>
+                    <GradientStop Color="#FF0083C5" Offset="1"/>
+                </LinearGradientBrush>
+            </Border.BorderBrush>
+            <Grid>
+                <TextBlock x:Name="Name" HorizontalAlignment="Left" VerticalAlignment="Top" TextWrapping="Wrap" Text="Name" Margin="10,10,0,0" FontSize="18" FontWeight="Black"/>
+                <TextBlock x:Name="Description" HorizontalAlignment="Left" VerticalAlignment="Top" TextWrapping="Wrap" Text="Description" Margin="10,40,0,0" FontSize="15"/>
+            </Grid>
+        </Border>
+    </Grid>
+</UserControl>
